@@ -1,0 +1,10 @@
+console.log("How all file watching........")
+for(let i of arr)
+fs.watchFile(i,{inerval:500},(what,file)=>{
+	let read = fs.readFileSync(i,"utf8")
+
+	let obj = 
+		{
+			path:i,
+			src:read
+		}
